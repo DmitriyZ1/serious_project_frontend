@@ -1,0 +1,181 @@
+@import '../base';
+
+
+.ord_background{
+    font-family: $font-roboto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+    .ord_block{
+        position: relative;
+        transform: translateY(300px);
+        max-width: 700px;
+        height: 600px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 35px 26px;
+        box-sizing: border-box;
+        transition: transform .2s;
+        .ord_content{
+            color: $gray-color;
+            width: 100%;
+            .ord_xmark{
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                cursor: pointer;
+            }
+            .ord_title{
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .ord_list{
+                overflow-y: auto;
+                height: 200px;
+                background-color: $backgroud-account;
+                padding: 0px 10px;
+                border-radius: 5px;
+                .ord_list_content{
+                    margin: 10px 0 0 0;
+                }
+            }
+            .ord_all_price{
+                margin-top: 10px;
+                font-size: 1.2rem;
+                span{
+                    font-size: 1.5rem;
+                    color: black;
+                }
+            }
+            .ord_warning{
+                text-align: center;
+                font-size: 0.9rem;
+                box-sizing: border-box;
+                padding: 20px 15px;
+                margin: 10px auto;
+                bottom: 0;
+                border-radius: 10px;
+                width: 90%;
+                background-color: rgb(22, 22, 22);
+               
+                color: $font-gray-color;
+                span{
+                    color: red;
+                }
+                
+            }
+        }
+    }
+}
+
+.ord_list_item{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px 0;
+    .ord_item_name{
+        width: 300px;
+    }
+    .ord_item_count{
+        width: 100px;
+        text-align: center;
+        // font-size: 1.4rem;
+    }
+    .ord_item_price{    
+        width: 100px;
+        text-align: end;
+        // font-size: 1.4rem;
+       
+    }
+}
+
+.ord_bank{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-enter-done{
+    background-color: rgba(#000000, .6);
+    .ord_block{
+        transform: translateY(0px);
+    }
+}
+.order-exit-active{
+    background-color: rgba(#000000, .6);
+    .ord_block{
+        transform: translateY(200px);
+    }
+}
+
+
+@media screen and (min-width: 720px){
+    .ord_block{
+        max-width: 700px;
+    }
+    .ord_item_name{
+        font-size: 1.2rem;
+    }
+    .ord_item_count{
+        font-size: 1.4rem;
+    }
+    .ord_item_price{    
+        font-size: 1.4rem;
+    }
+    .pic_mir{
+        height: 125px;
+    }
+    .pic_sbp{
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 719px){
+    .ord_block{
+        max-width: 700px;
+    }
+    .ord_item_name{
+        font-size: 1rem;
+    }
+    .ord_item_count{
+        font-size: 1.2rem;
+    }
+    .ord_item_price{    
+        font-size: 1.2rem;
+    }
+    .pic_mir{
+        height: 125px;
+    }
+    .pic_sbp{
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .ord_block{
+        width: 500px;
+    }
+    .ord_item_name{
+        font-size: 0.9rem;
+    }
+    .ord_item_count{
+        font-size: 1.1rem;
+    }
+    .ord_item_price{    
+        font-size: 1.1rem;
+    }
+    .pic_mir{
+        height: 100px;
+    }
+    .pic_sbp{
+        height: 100px;
+    }
+}

@@ -1,0 +1,219 @@
+@import '../base.scss';
+
+
+.products {
+    margin-top: 140px;
+    .product_content {
+        margin-top: 50px;
+        display: flex;
+
+        .product_block_pic {
+            width: 550px;
+            height: 550px;
+            background-color: rgb(245, 245, 245);
+            cursor: pointer;
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .product_block_text {
+            margin-left: 60px;
+
+            .product_info_title {
+                h3 {
+                    font-size: 1.8rem;
+                    font-family: roboto;
+                }
+            }
+
+            .product_info_rating {
+                margin-top: 15px;
+                display: flex;
+                height: 30px;
+
+                .p_info_stars {
+                    margin-top: 1px;
+                }
+
+                .p_info_reviews {
+                    font-size: 1rem;
+                    font-family: roboto;
+                    margin-top: 4px;
+                    margin-left: 10px;
+                    color: rgb(22, 115, 255);
+                    cursor: pointer;
+                }
+
+                .p_info_like {
+                    margin-left: 40px;
+                    color: rgb(169, 169, 169);
+                    cursor: pointer;
+                }
+                .cp_like:hover{
+                    color:rgb(130, 130, 130);
+                }
+                .red_color {
+                    color: $base-color;
+                }
+                .p_info_cart{
+                    margin-left: 40px;
+                }
+            }
+            .product_info_specifications{
+                margin-top: 20px;
+                .p_specifications_title{
+                    font-size: 1rem;
+                    font-family: roboto;
+                    color: rgb(0, 0, 0);
+                }
+                .p_specifications_list{
+                    
+                    font-size: 0.9rem;
+                    .p_specifications_item{
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 20px 0;
+                        .p_sp_item_title{
+                            font-family: roboto;
+                            color: rgb(169, 169, 169);
+                            width: 300px;
+                        }
+                        .p_sp_item_text{
+                            font-family: roboto-light;
+                            color: rgb(0, 0, 0);
+                            width: 100px;
+                        }
+                    }
+                    .del_specifications{
+                        display: none;
+                    }
+                }
+            }
+            .product_info_description{
+                margin-top: 50px;
+                h4{
+                    font-size: 1.7rem;
+                    font-family: roboto;
+                }
+                .p_descr_text{
+                    margin-top: 20px;
+                    font-size: 0.9rem;
+                    font-family: roboto-light;
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+    .product_reviews{
+        margin-top: 60px;
+        width: 100%;
+        .product_reviews_title{
+            font-family: roboto;
+            display: flex;
+            cursor: pointer;
+            h4{
+                font-size: 2rem;
+                span{
+                    font-size: 1.5rem;
+                    color: rgb(169, 169, 169);
+                    margin-left: 10px;
+                }
+            }
+        }
+        .product_reviews_link{
+            margin: 20px 0 10px 0;
+            .r_l_button{
+                width: 160px;
+                height: 45px;
+                font-size: 1rem;
+                line-height: 2.8rem;
+                padding: 0px 0px;
+                border-radius: 4px;
+                background-color: $base-color;
+                color: $font-white-color;
+                border: 1px solid $base-color;
+                text-decoration: none;
+                cursor: pointer;
+                position: relative;
+            }
+            .r_l_button:hover {
+                background-color: $base-color-hover;
+            }
+            .r_l_button:disabled {
+                background-color: rgb(169, 169, 169);
+                border: 1px solid rgb(169, 169, 169);
+            }
+        }
+        .product_reviews_rating{
+            margin-top: 30px;
+            span{
+                color:  $base-color ;
+                margin-left: 10px;
+                font-size: 1.5rem;
+                font-family: roboto;
+            }
+        }
+        .product_reviews_list{
+           
+            margin-top: 50px;
+            .p_rev_item{
+                max-width: 700px;
+                margin: 60px 0;
+                .p_rev_item_name{
+                    font-family: roboto;
+                    font-size: 1.1rem;
+                    margin: 10px 0;
+                    span{
+                        margin-left: 7px;
+                       color: rgb(169, 169, 169);
+                       font-size: 1rem;
+                    }
+                }
+                .p_rev_item_bals{
+                    margin: 10px 0;
+                    span{
+                        color: rgb(169, 169, 169); 
+                        font-family: roboto;
+                    };
+                }
+                .p_rev_item_text{
+                    margin: 10px 0;
+                    font-family: roboto-light;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.push_cart{
+    font-size: 1rem;
+    width: 200px;
+    line-height: 2.8rem;
+    font-weight: 500;
+    padding: 0 10px;
+    background-color: $base-color;
+    border-radius: 4px;
+    color: $font-white-color;
+    border: 1px solid $base-color;
+    text-decoration: none;
+    cursor: pointer;
+    text-align:center;
+    position: relative;
+    
+    svg{
+        position:relative;
+        top: 5px;
+        margin-left: 10px;
+    }
+}
+.push_cart:hover{
+    background-color: $base-color-hover;
+}
+.push_cart_added{
+    background-color: rgb(255, 255, 255);
+    color: $base-color;
+    border: 1px solid $base-color;
+}

@@ -1,0 +1,219 @@
+@import '../base.scss';
+
+
+.products_list_page{
+    margin-top: 170px;
+    .products_list_page_category{
+        margin: 15px 5px;
+        h2{
+            font-family: roboto;
+            font-size: 2rem;
+            color: rgb(32, 32, 32);
+        }
+    }
+    .products_list_page_content{
+        margin-top: 40px;
+        width: 100%;
+        min-height: 1000px; //времянка
+        display: flex;
+        .b_filter{
+            // width: 25%;
+            height: 100%;
+            .b_filter_block_categories{
+                font-family: roboto;
+                .filter_title{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .b_list{
+            // width: 75%;
+            height: 100%;
+            overflow: hidden;
+            .b_sorted{
+                // width: 300px;
+                margin: 0 auto;
+                // display: flex;
+                justify-content: space-between;
+                font-size: 0.9rem;
+                color: rgb(168, 168, 168);
+                font-family: roboto;
+                user-select: none;
+                input[type=radio]{
+                    display: none;
+                }
+                input[type=radio]:checked{
+                    +label{
+                       color: rgb(31, 31, 31);
+                       font-size: 1rem;
+                    }
+                }
+                label{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.filter_block{
+    margin: 25px 0;
+    font-family: roboto;
+    .filter_title{
+        font-size: 1rem;
+    }
+    .filter_content{
+        font-family: roboto-light;
+        // font-size: 1rem;
+        width: 90%;
+        margin: 10px;
+        .filter_item{
+           margin: 8px 0;
+           cursor: pointer;
+           label{
+            margin-left: 10px;
+            cursor: pointer;
+           }
+        }
+        .filter_item_price{
+            padding: 20px 0;
+            // display: flex;
+            .inp_price_block{
+                .inp_price_to{
+                    font-size: 1rem;
+                    color:rgb(168, 168, 168) ;
+                }
+                .inp_price_inp{
+                    display: block;
+                    width: 7rem;
+                    padding: 10px;
+                    font-size: 1.1rem;
+                    font-family: roboto-light;
+                }
+            }
+            
+        }
+    }
+}
+
+.list_filter_sort{
+    margin-top: 50px;
+    width: 100%;
+    .list_filter_border{
+        width: 100%;
+        height: 10px;
+        border-bottom: 1px solid rgb(168, 168, 168);
+    }
+    .list_filter_items{
+        margin-top: 50px;
+        width: 100%;
+        display: grid;
+        grid-template-rows:  repeat(auto-fill, 385px); 
+        grid-auto-rows: 385px;
+        a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+    }
+}
+
+.show_more{
+    width: 100%;
+    margin-top: 50px;
+    height: 100px;
+    .show_more_button{
+        font-size: 1.2rem;
+        font-family: roboto;
+        width: 100%;
+        height: 45px;
+        // display: block;
+        border: 1px solid rgb(168, 168, 168);
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .b_filter{
+        width: 25%;
+    } 
+    .b_list{
+        width: 75%;
+    }
+    .list_filter_items{
+        grid-template-columns: repeat(4, 25%);
+    }
+    .b_sorted{
+        display: flex;
+        width: 300px;
+    }
+    .filter_content{
+        font-size: 1rem;
+    }
+    .filter_item_price{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1399px){
+    .b_filter{
+        width: 25%;
+    }
+    .b_list{
+        width: 75%;
+    }
+    .list_filter_items{
+        grid-template-columns: repeat(4, 25%);
+    }
+    .b_sorted{
+        width: 300px;
+        display: flex;
+    }
+    .filter_content{
+        font-size: 1rem;
+    }    
+    .filter_item_price{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1230px){
+    .list_filter_items{
+        grid-template-columns: repeat(3, 33.3%);
+    }
+}
+
+@media screen and (max-width: 920px){
+    .list_filter_items{
+        grid-template-columns: repeat(2, 50%);
+    }
+    .filter_content{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .b_filter{
+        width: 50%;
+    }
+    .b_list{
+        width: 50%;
+    }
+    .list_filter_items{
+        grid-template-columns: repeat(1, 100%);
+    }
+    .b_sorted{
+       display: block;
+       width: 200px;
+        .b_sorted_item{
+            margin: 10px 0;
+        }
+    }
+    .filter_content{
+        font-size: 1rem;
+    }
+    .filter_item_price{
+        display: block;
+    }
+}

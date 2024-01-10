@@ -1,0 +1,54 @@
+@import '../base';
+
+.enter{
+    opacity: 0;
+    transform: translateY(-50px);
+    position: absolute;
+    z-index: 100;
+    transition: all .3s;
+    .enter_interactive{
+        position: absolute;
+        width: 220px;
+        height: 100px;
+        right: -85px;
+        top: 0px;
+        z-index: 100;
+        .enter_block{
+            width: 220px;
+            height: 90px;
+            background-color:rgb(255, 255, 255) ;
+            box-sizing: border-box;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 1px 1px 5px rgb(225, 225, 225);
+            padding: 20px;
+            .enter_content{
+                .enter_info{
+                    padding: 5px;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: space-between;
+                    color: black;
+                    svg{
+                        margin-top: 3px;
+                    }
+                }
+                .enter_info:hover{
+                    color: rgb(109, 109, 109);
+                }   
+            }
+        }
+    }
+}
+
+
+.transenter-enter-done{
+    opacity: 1;
+    transform: translateY(0px);
+ }
+ .transenter-exit-active{
+     transform: translateY(-50px);
+     opacity: 0;
+ }
+ 

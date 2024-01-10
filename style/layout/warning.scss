@@ -1,0 +1,54 @@
+@import '../base';
+
+
+.warning_block{
+    font-family: roboto;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: rgb(22, 22, 22);
+    z-index: 100;
+    .warning_x{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+    .warning_content{
+        width: 100%;
+        .warning_text{
+            text-align: center;
+            color: $font-gray-color;
+            h3{
+                padding: 10px 0;
+                color: red;
+                font-size: 2rem;
+                font-size: 1rem;
+            }
+            .warning_info{
+              height: 80px;  
+              padding: 10px;
+              font-size: 0.9rem;
+            }
+            .warning_ok{
+                display: block;
+                margin: 10px auto;
+                height: 27px;
+                width: 100px;
+                font-family:$font-roboto;
+                font-size: 1rem;
+                border-radius: 0.3rem;
+                background-color: $base-color;
+                color:  $font-white-color;
+                border: 1px solid $base-color;
+                cursor: pointer;
+            }
+            .warning_ok:hover{
+                background-color: $base-color-hover;
+                border: 1px solid $base-color-hover;
+            }
+        }
+    }
+}

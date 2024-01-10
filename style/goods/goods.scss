@@ -1,0 +1,82 @@
+@import '../base.scss';
+
+.goods{
+    margin-top: 170px;
+}
+
+.out_items{
+    margin: 15px 5px;
+    min-height: 600px;
+    .out_items_tittle{
+        h2{
+            font-family: roboto;
+            font-size: 1.8rem;
+            span{
+                color: rgb(163, 163, 163);
+            }
+        }
+    }
+    .out_items_list{
+        margin-top: 80px;
+        width: 100%;
+        display: grid;
+        grid-template-rows:  repeat(auto-fill, 385px); 
+        // grid-template-columns: repeat(5, 20%);
+        grid-auto-rows: 385px;
+        justify-items: center;
+
+        a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+    }
+}
+
+.show_more{
+    width: 100%;
+    margin-top: 50px;
+    height: 100px;
+    .show_more_button{
+        display: block;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        font-family: roboto;
+        width: 50%;
+        height: 45px;
+        // display: block;
+        border: 1px solid rgb(168, 168, 168);
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .out_items_list{
+        grid-template-columns: repeat(5, 20%);
+    }
+}
+
+@media screen and (max-width: 1399px){
+    .out_items_list{
+        grid-template-columns: repeat(5, 20%);
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .out_items_list{
+        grid-template-columns: repeat(4, 25%);
+    }
+}
+
+@media screen and (max-width: 940px){
+    .out_items_list{
+        grid-template-columns: repeat(3, 33.3%);
+    }
+}
+
+@media screen and (max-width: 720px){
+    .out_items_list{
+        grid-template-columns: repeat(2, 50%);
+    }
+}

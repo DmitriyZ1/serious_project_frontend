@@ -1,0 +1,213 @@
+@import '../base';
+
+.account{
+    margin-top: 125px;
+    width: 100%;
+    background-color: $backgroud-account;
+    font-family: $font-roboto;
+    .selection{
+        max-width: 970px;
+        margin: 0px auto;
+        padding-top: 1.5rem;
+        padding-bottom: 30px;
+        h1{
+            font-size: 2rem;
+        }
+        .account_messages{
+            width: 100%;
+            height: 100px;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            
+            .account_messages_content{
+                font-family: $font-roboto-l;
+                font-size: 0.9rem;
+                margin-left: 50px;
+                strong{
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+
+.account_blocks{
+    margin-top: 30px;
+    width: 100%;
+    // display: flex;
+    justify-content: space-between;
+    .absence{
+        color: rgb(231, 231, 231);
+        font-size: 2rem;
+    }
+    .column_equal{
+        box-sizing: border-box;
+    }
+    .account_my_data{
+        min-height: 250px;
+        .my_data_content{
+            .my_data_head{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid $border-color;
+                padding: 20px;
+                .my_data_head_tittle{
+                    display: flex;
+                    justify-content: space-between;
+                    svg{
+                        padding-top: 10px;
+                    }
+                    h2{
+                        padding-top: 15px;
+                        margin-left: 30px;
+                    }
+                }
+                .but_account_edit{
+                    width: 120px;
+                    height: 44px;
+                    background-color: white;
+                    border: 2px solid $border-color;
+                    font-family: $font-roboto;
+                    border-radius: 0.4rem;
+                    cursor: pointer;
+                }   
+                .but_account_edit:hover{
+                    background-color: rgb(248, 248, 248);
+                }            
+            }
+            .my_data_primary{
+                padding: 45px;
+                font-family:  $font-roboto-l;
+                font-size: 0.9rem;
+                .my_data_tel{
+                    margin-top: 20px;
+                }
+                .my_data_mail{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .account_my_discounts{
+        min-height: 300px;
+        .my_discounts_content{
+            .my_discounts_head{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid $border-color;
+                padding: 20px;
+                .my_discounts_head_tittle{
+                    display: flex;
+                    justify-content: space-between;
+                    svg{
+                        padding-top: 10px;
+                    }
+                    h2{
+                        padding-top: 15px;
+                        margin-left: 30px;
+                    }
+                }
+            }
+            .my_discounts_info{
+                width: 100%;
+                min-height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+        }
+    }
+    .account_my_orders{
+        min-height: 500px;
+        .my_orders_content{
+            .my_orders_head{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid $border-color;
+                padding: 20px;
+                .my_orders_head_tittle{
+                    display: flex;
+                    justify-content: space-between;
+                    svg{
+                        padding-top: 5px;
+                    }
+                    h2{
+                        padding-top: 15px;
+                        margin-left: 30px;
+                    }
+                }
+                
+            }
+            .my_orders_info{
+                width: 100%;
+                min-height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .account_my_bonuses{
+        height: 250px;
+        .my_bonuses_content{
+            .my_bonuses_head{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid $border-color;
+                padding: 20px;
+                .my_bonuses_head_tittle{
+                    display: flex;
+                    justify-content: space-between;
+                    svg{
+                        padding-top: 5px;
+                    }
+                    h2{
+                        padding-top: 15px;
+                        margin-left: 30px;
+                    }
+                }
+                
+            }
+            .my_bonuses_info{
+                width: 100%;
+                min-height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    
+}
+
+.account_frame{
+    background-color: white;
+    box-shadow: 0 1px 5px  0 rgba(0,0,0,.2);
+    border-radius: 0.4rem;
+}
+
+.account_block_item{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 1000px){
+    .account_blocks{
+        display: flex;
+    }
+    .column_equal{
+        width: 49.5%;
+    }
+}
+
+@media screen and (max-width: 999px){
+    .account_blocks{
+        display: block;
+    }
+    .column_equal{
+        width: 450px;
+    }
+}

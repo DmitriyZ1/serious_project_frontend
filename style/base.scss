@@ -1,0 +1,26 @@
+$base-color: rgb(181, 90, 90);
+$base-color-hover: rgb(97, 39, 39);
+$gray-color: rgb(51, 51, 51);
+$link-color:  rgb(0, 0, 255);
+$link-color-hover :  rgb(7, 0, 108);
+$border-color: rgb(209, 209, 209);
+$font-white-color: rgb(235, 235, 235);
+$background-white-color: rgb(255, 255, 255);
+$font-black-color: rgb(0, 0, 0);
+$backgroud-account: rgb(233, 234, 236);
+$font-gray-color: rgb(113, 113, 113);
+
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: roboto-light;
+    src: url(../fonts/roboto/Roboto-Light.ttf);
+}
+
+$font-roboto: roboto, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$font-roboto-l: roboto-light, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+

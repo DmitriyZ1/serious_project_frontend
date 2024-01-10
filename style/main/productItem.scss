@@ -1,0 +1,120 @@
+@import '../base.scss';
+
+
+.cp_item{
+    width: 200px;
+    box-sizing: border-box;
+    .cp_item_img{
+        width: 200px;
+        height: 160px;
+        .img_min_item{
+            width: 200px;
+            height: 160px;
+            position: relative;
+            background-color: rgb(245, 245, 245);
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    .cp_indent{
+        width: 200px;
+        height: 10px;
+    }
+    .cp_item_name{
+        width: 200px;
+        height: 50px;
+        font-family: roboto;
+        font-size: 1rem;
+    }
+    .cp_item_reating{
+        width: 200px;
+        height: 24px;
+        color:rgb(188, 36, 36);
+        font-size: 0.9rem;
+        font-family: roboto;
+        position: relative;
+        svg{  
+            position: relative;
+            top: 2px;
+        }
+        .reating_num{
+            margin-left: 3px;
+        }
+        .reating_comments{
+            font-size: 0.9rem;
+            color: rgb(169, 169, 169);
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .reating_comments:hover{
+            color: rgb(130, 130, 130);
+        }
+    }
+    .cp_price{
+        width: 200px;
+        height: 36px;
+        position: relative;
+        .cp_price_block{
+            font-family: roboto;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .cp_buttons{
+        width: 200px;
+        height: 40px;
+        display: flex;
+        .cp_button{
+            cursor: pointer;
+        }
+        .cp_like{
+            color:rgb(169, 169, 169);
+            width: 40px;
+            height:100%;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        .cp_like:hover{
+            color:rgb(130, 130, 130);
+        }
+        .red_color{
+            color: $base-color;
+        }
+        .red_color:hover{
+            color: $base-color-hover;
+        }
+    }
+}
+
+.button_card{
+    width: 72px;
+    height: 40px;
+    background-color: $base-color;
+    border-radius: 4px;
+    color: $font-white-color;
+    border: 1px solid $base-color;
+    text-decoration: none;
+    cursor: pointer;
+}
+.button_card:hover{
+    background-color: $base-color-hover;
+}
+
+.white_color{
+    background-color: rgb(255, 255, 255);
+    color: $base-color;
+    border: 1px solid $base-color;
+}
+
+.red_color{
+    color: $base-color;
+}
+.red_color:hover{
+    color: $base-color-hover;
+}
+    

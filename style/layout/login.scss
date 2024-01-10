@@ -1,0 +1,92 @@
+@import '../base';
+
+
+.login_background{
+    font-family: $font-roboto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+    .login_block{
+        position: relative;
+        transform: translateY(300px);
+        width: 400px;
+        height: 300px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 50px 20px;
+        box-sizing: border-box;
+        transition: transform .2s;
+        .login_content{
+            h3{
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .login_input{
+                span{
+                    margin-left: 30px;
+                }
+                input{
+                    display: block;
+                    width: 300px;
+                    height: 40px;
+                    margin: 10px auto;
+                    font-size: 1.4rem;
+                }
+                button{
+                    display: block;
+                    width: 300px;
+                    height: 40px;
+                    margin: 10px auto;
+                    font-size: 1.4rem;
+                    background-color:   $base-color;
+                    border-radius: 4px;
+                    color: $font-white-color;
+                    border: 1px solid $base-color;
+                    text-decoration: none;
+                    cursor: pointer;
+                    position: relative;
+                }
+                button:hover{
+                    background-color: $base-color-hover;
+                }
+                .butpassive{
+                    background-color:gray;
+                    cursor: default;
+                    border: 1px solid gray;
+                }
+                .butpassive:hover{
+                    background-color:gray;
+                }   
+            }
+            
+        }
+    }
+    .login_xmark{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+    }
+}
+
+.trans-enter-done{
+    background-color: rgba(#000000, .6);
+    .login_block{
+        transform: translateY(0px);
+    }
+}
+.trans-exit-active{
+    background-color: rgba(#000000, .6);
+    .login_block{
+        transform: translateY(200px);
+    }
+}
+

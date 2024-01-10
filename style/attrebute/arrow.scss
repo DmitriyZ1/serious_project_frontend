@@ -1,0 +1,15 @@
+@import '../base.scss';
+
+.arrow_back {
+    width: 100%;
+    padding: 20px;
+    font-family: $font-roboto-l;
+    font-weight: 900;
+    color: rgb(32, 32, 32);
+    position: relative;
+    a,
+    a:active {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+}

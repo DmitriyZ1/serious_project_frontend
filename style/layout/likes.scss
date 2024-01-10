@@ -1,0 +1,97 @@
+@import '../base';
+
+
+.likes{
+    opacity: 0;
+    transform: translateY(-50px);
+    position: absolute;
+    z-index: 100;
+    transition: all .3s;
+    .likes_interactive{
+        position: absolute;
+        width: 420px;
+        min-height: 100px;
+        max-height: 500px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        right: -105px;
+        top: 0px;
+        z-index: 100;
+        .likes_block{
+            width: 420px;
+            min-height: 90px;
+            background-color:rgb(255, 255, 255) ;
+            box-sizing: border-box;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 1px 1px 5px rgb(225, 225, 225);
+            padding: 30px 30px 10px 30px;
+        }
+    }
+}
+
+.like_items{
+    width: 100%;
+   
+    .like_item{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .like_item_pic{
+            width: 45px;
+            height: 45px;
+            background-color: rgb(245, 245, 245);
+            cursor: pointer;
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .like_item_name{
+            font-size: 1rem;
+            font-family: roboto-light;
+            cursor: pointer;
+            width: 200px;
+        }
+        .like_item_del{
+            width: 45px;
+            height: 45px;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+        }
+        .like_item_del:hover{
+            color: rgb(206, 206, 206);
+        }
+    }
+}
+
+.like_button{
+    padding: 20px;
+    button{
+        display: block;
+        height: 44px;
+        width: 100%;
+        font-family:$font-roboto;
+        font-size: 1rem;
+        border: 1px solid $border-color;
+        border-radius: 0.3rem;
+        background-color: $base-color;
+        color:  $font-white-color;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: $base-color-hover;
+    }
+}
+
+
+.transLikes-enter-done{
+    opacity: 1;
+    transform: translateY(0px);
+ }
+ .transLikes-exit-active{
+     transform: translateY(-50px);
+     opacity: 0;
+ }
+ 

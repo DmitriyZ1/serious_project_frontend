@@ -1,0 +1,72 @@
+@import '../base';
+
+
+.poster{
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    margin: 15px 0 70px 0;
+    .poster_content{
+        // height: 500px;
+        width: 100%;
+        margin: 0 auto;
+        .poster_img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .poster_content{
+        height: 500px;
+    } 
+}
+
+@media screen and (max-width: 1499px){
+    .poster_content{
+        height: 360px;
+    } 
+    
+}
+
+@media screen and (max-width: 1399px){
+    .poster_content{
+        height: 320px;
+    } 
+    
+}
+
+@media screen and (max-width: 1299px){
+    .poster_content{
+        height: 280px;
+    } 
+  
+}
+
+@media screen and (max-width: 1199px){
+    .poster_content{
+        height: 260px;
+    } 
+}
+
+
+@media screen and (max-width: 999px){
+    .poster_content{
+        height: 230px;
+    } 
+}
+
+@media screen and (max-width: 699px){
+    .poster_content{
+        height: 200px;
+    } 
+}
+
+@media screen and (max-width: 525px){
+    .poster_content{
+        height: 180px;
+    } 
+}
+
+

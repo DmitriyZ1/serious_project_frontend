@@ -1,0 +1,83 @@
+@import '../base';
+
+
+.catalog{
+    position: fixed;
+    top: 124px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    .catalog_background{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000000, .6);
+        .catalog_block{
+            background-color: rgb(253, 252, 252);
+            width: 100%;
+            height: 500px;
+            border-top: 1px solid rgb(227, 227, 227);
+            .catalog_content{
+                display: flex;               
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.cat_left_menu{
+    width: 30%;
+    min-width: 210px;
+    height: 100%;
+    background-color: rgb(232, 232, 255);
+    border-right: 1px solid rgb(215, 215, 238);
+    padding: 60px 0px;
+    box-sizing: border-box;
+    ul{
+        font-family: roboto;
+        font-size: 1.2rem;
+        li{
+            padding: 15px 50px;
+            cursor: pointer;
+        }
+    }
+}
+
+.cat_right_menu{
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    ul{
+        padding-top: 100px;
+        font-family: roboto;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li{
+            padding: 15px 20px;
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+        }
+        li:hover{
+            color: $base-color-hover;
+        }
+    }
+}
+
+
+
+.activ_li{
+    background-color:  rgb(255, 255, 255);
+    border-right: 3px solid $base-color;
+}
+
+.trans-enter-done{
+    background-color: rgba(#000000, .6);
+   
+}
+.trans-exit-active{
+    background-color: rgba(#000000, .6);
+    
+}

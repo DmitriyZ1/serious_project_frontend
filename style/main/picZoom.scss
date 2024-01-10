@@ -1,0 +1,47 @@
+@import '../base';
+
+.pic_background{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 0.5s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pic_content{
+        position: relative;
+        transform: translateY(300px);
+        width: 525px;
+        height: 700px;
+        background-color: white;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: transform .2s;
+        .pic_xmark{
+            position: absolute;
+            z-index: 10;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+        .pic_img{
+            display: block;
+        }
+    }
+}
+
+.zooming-enter-done{
+    background-color: rgba(#000000, .6);
+    .pic_content{
+        transform: translateY(0px);
+    }
+}
+.zooming-exit-active{
+    background-color: rgba(#000000, .6);
+    .pic_content{
+        transform: translateY(200px);
+    }
+}
