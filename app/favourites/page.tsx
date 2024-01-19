@@ -99,7 +99,7 @@ export default function LikePage() {
                                 </div>
                                 <div className="favourites_item_addendum">
                                     <div className="favourites_item_price">
-                                        {outPrice(elem)} <span><FontAwesomeIcon icon='ruble' size='sm' className='i_ruble' /></span>
+                                        {outPrice(elem)} <span><FontAwesomeIcon icon='ruble' size='sm' className='i_ruble0' /></span>
                                     </div>
                                     <div className="favourites_item_button">
                                         <button className='button_addcart' onClick={() => {putProduct(elem)}}>

@@ -92,6 +92,7 @@ export default function Comments({ params }: RoutingParams) {
                         console.error(err)
                     }
                 })()
+                router.push(`/products/${params.id}`)
             }else{
                 router.push('/')
             }

@@ -179,7 +179,7 @@ export default function Cart(){
                             <div className="but_count" onClick={() => {countUpdate('increment', elem.id)}}>+</div>
                         </div>
                         <div className="cart_item_price">
-                            {outPrice(elem.id)} <span><FontAwesomeIcon icon='ruble' size='sm' className='i_ruble'/></span>
+                            {outPrice(elem.id)} <span><FontAwesomeIcon icon='ruble' size='sm' className='i_ruble0'/></span>
                         </div>
                     </div>
                 </div>

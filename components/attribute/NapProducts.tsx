@@ -36,6 +36,9 @@ export default function NavProducts(){
                     <div className="bottom_nav_a">
                         <Link href="/skateboards?sort=rating&page=1">скейтборды</Link>
                     </div>
+                    <div className="bottom_nav_a favourites_link">
+                        <Link href="/favourites">избранное</Link>
+                    </div>
                 </div>
             </div>
         </div>}

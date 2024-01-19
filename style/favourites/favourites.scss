@@ -82,8 +82,11 @@
             width: 120px;
             .favourites_item_price{
                 font-family: roboto;
-                font-size: 1.4rem;
+                // font-size: 1.4rem;
                 text-align: right;
+                svg{
+
+                }
             }
             .favourites_item_button{
                 .button_addcart{
@@ -125,6 +128,18 @@
     .button_text{
         display: inline;
     }
+    .favourites_item_price{
+        font-size: 1.4rem;
+        svg{
+            width: 1rem;
+            font-size: 1.2rem;     
+        }
+    }
+    .fav_name_button{
+        span{
+           display: block;
+        }
+    }
 }
 
 @media screen and (max-width: 1014px){
@@ -136,6 +151,18 @@
     }
     .button_text{
         display: inline;
+    }
+    .favourites_item_price{
+        font-size: 1.4rem;
+        svg{
+            width: 1rem;
+            font-size: 1.2rem;     
+        }
+    }
+    .fav_name_button{
+        span{
+           display: block;
+        }
     }
 }
 
@@ -149,5 +176,33 @@
     }
     .button_text{
         display: none;
+    }
+    .favourites_item_price{
+        font-size: 1.2rem;
+        svg{
+            width: 0.8rem;
+            font-size: 1rem;     
+        }
+    }
+}
+
+@media screen and (max-width: 650px){
+    .fav_name_text{
+        font-size: 0.8rem;
+    }
+    .button_text{
+        display: none;
+    }
+    .favourites_item_price{
+        font-size: 1rem;
+        svg{
+            width: 0.6rem;
+            font-size: 0.8rem;     
+        }
+    }
+    .fav_name_button{
+        span{
+           display: none;
+        }
     }
 }

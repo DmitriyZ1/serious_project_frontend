@@ -34,7 +34,6 @@
         width: 100%;
         background-color: $gray-color;
         height: 36px;
-       
         color: $font-white-color;
         line-height: 2rem;
         font-weight: 500;
@@ -48,9 +47,6 @@
             .header_navbar__navigatiom{
                 display: flex;
                 position: relative;
-               .nav_mar{
-                margin-right: 30px;
-               }
                .location_city{
                     cursor: pointer;
                     position: relative;
@@ -78,6 +74,7 @@
                         margin-right: 8px;
                     }
                 }
+
             }
             .header_navbar__contact:hover{
                 color: gray;
@@ -210,6 +207,48 @@
 }
 
 
+.flying_cart{
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    position: fixed;
+    bottom: 200px;
+    right: 50px;
+    z-index: 500;
+    border-radius: 10px;
+    background-color: rgb(165, 255, 68);
+    box-shadow: 1px 1px 5px black; 
+    opacity: 0.7;
+    .tab_cart{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .cart_circle{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: $base-color;
+            border-radius: 10px;
+            right: 25px;
+            bottom: 29px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+        }
+        .show_none{
+            display: none;
+        }
+    }
+    span{
+        display: block;
+        font-size: 1.1rem;
+        font-family: roboto;
+    }
+}
+
+
 @keyframes flashing {
     50% {color: $font-white-color;}
     51% {color: rgba(255, 255, 255,0);}
@@ -218,8 +257,18 @@
 }
 
 @media screen and (min-width: 1400px){
+    .phone_head{
+        display: block;
+    }
+    .login_head{
+        display: none;
+    }
     .header_block__app{
+        display: block;
         font-size: 1.1rem;
+        .nav_mar{
+            margin-right: 30px;
+        }
     }
     .middle_input{
             width: 41rem;
@@ -248,10 +297,24 @@
     .header_navbar__middle{
         justify-content:left;
     }
+    .flying_cart{
+        display: none;
+    }
 }
 
 
 @media screen and (max-width: 1399px){
+    .phone_head{
+        display: block;
+    }
+    .login_head{
+        display: none;
+    }
+    .header_block__app{
+        .nav_mar{
+            margin-right: 30px;
+        }
+    }
     .middle_label{
         display: block;
     } 
@@ -276,6 +339,9 @@
     }
     .header_navbar__middle{
         justify-content:left;
+    }
+    .flying_cart{
+        display: none;
     }
 }
 
@@ -322,6 +388,12 @@
 }
 
 @media screen and (max-width: 970px){
+    .phone_head{
+        display: none;
+    }
+    .login_head{
+        display: block;
+    }
     .middle_label{
         display: block;
     } 
@@ -331,6 +403,9 @@
     }
     .header_navbar__middle{
         justify-content:  space-between;
+    }
+    .flying_cart{
+        display: block;
     }
 }
 
@@ -353,6 +428,23 @@
         width: 23rem;
         input{
             width: 14.5rem;
+            padding: 0 39px;
+        }
+    }  
+}
+
+@media screen and (max-width: 480px){
+    .header_block__app{
+        font-size: 0.8rem;
+       .nav_mar{
+            margin-right: 10px;
+        }
+    
+    }
+    .middle_input{
+        width: 70%;
+        input{
+            width: 56%;
             padding: 0 39px;
         }
     }  

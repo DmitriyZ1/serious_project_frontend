@@ -41,7 +41,7 @@ export default function Footer(){
                     </ul>
                 </div> 
                 <div className="footer_block">
-                    <div className="footer_tel">+7 967 098 48 98</div>
+                    <div className="footer_tel">+7 967 098 ** 98</div>
                     <div className="footer_icons">
                         <div className="footer_icon">
                             <Link href="https://vk.com/dmitriy_z_ov" className='footer_list_link'>

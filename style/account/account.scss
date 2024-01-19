@@ -12,6 +12,7 @@
         padding-bottom: 30px;
         h1{
             font-size: 2rem;
+            margin-left: 10px;
         }
         .account_messages{
             width: 100%;
@@ -180,6 +181,14 @@
         }
     }
     
+}
+
+.exit_user_account{
+    font-size: 1.4rem;
+    color: rgb(109, 107, 107);
+    margin-left: 10px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 .account_frame{

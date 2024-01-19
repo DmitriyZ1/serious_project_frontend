@@ -63,6 +63,12 @@
             }
             .product_info_specifications{
                 margin-top: 20px;
+                .p_specifications_price{
+                    font-size: 1.6rem;
+                    font-family: roboto;
+                    color: rgb(0, 0, 0);
+                    margin: 20px 0;
+                }
                 .p_specifications_title{
                     font-size: 1rem;
                     font-family: roboto;

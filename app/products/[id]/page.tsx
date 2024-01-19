@@ -167,7 +167,7 @@ export default function Products({ params }: {params: {id: string}}) {
                 <ArrowBack patch='/'/>
                 <div className="product_content">
                     <div className="product_block_pic" onClick={() => {picOut()}}>
-                        <Image src={whatPicture(item?.photos)} alt='' width={412} height={550}  />
+                        <img src={whatPicture(item?.photos)} alt='' width={412} height={550}  />
                     </div>
                     <div className="product_block_text">
                         <div className="product_info_title">
@@ -189,6 +189,7 @@ export default function Products({ params }: {params: {id: string}}) {
                             </div>
                         </div>
                         <div className="product_info_specifications">
+                            <div className='p_specifications_price'>{item?.price} <FontAwesomeIcon icon='ruble' size='sm' className='i_ruble'/> </div>  
                             <p className="p_specifications_title">Характеристики:</p>
                             <ul className="p_specifications_list">
                                 <li className="p_specifications_item">

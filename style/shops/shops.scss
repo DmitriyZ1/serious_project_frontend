@@ -79,6 +79,9 @@
             font-size: 1.4rem;
         }
     }
+    .shop_column_three{
+        display: block;
+    }
 }
 
 @media screen and (max-width: 1014px){
@@ -87,5 +90,20 @@
         h4{
             font-size: 1.2rem;
         }
+    }
+    .shop_column_three{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .location_list_item{
+        font-size: 0.9rem;
+        h4{
+            font-size: 1.2rem;
+        }
+    }
+    .shop_column_three{
+        display: none;
     }
 }

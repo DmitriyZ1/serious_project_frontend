@@ -69,6 +69,13 @@ export default function Account() {
     const switchingEdit = ():void => {
         router.push('personal-account/edit')
     }
+
+    const exitUser = ():void => {
+        dispatch(intend(null));
+        dispatch(loginStatus(false));
+        window.localStorage.removeItem('token');
+        router.push('/');
+    }
     
     return (
         <>
@@ -144,6 +151,7 @@ export default function Account() {
                             </div>
                         </div>
                     </div>
+                    <div className="exit_user_account" onClick={() => {exitUser()}}> Выйти </div>
                 </div>     
             </div>
         </>

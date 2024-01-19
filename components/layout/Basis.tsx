@@ -51,8 +51,8 @@ export default function Basis({ children, }:
     const [showEnter, setShowEnter] = useState<boolean>(false)
     const [showBuy, setShowBuy] = useState<boolean>(false)
     const [showLikes, setShowLikes] = useState<boolean>(false)
-    const [emptyCart, setShowEmptyCart] = useState<number>(0)
-    const [emptyLike, setShowEmptyLike] = useState<number>(0) 
+    const [emptyCart, setEmptyCart] = useState<number>(0)
+    const [emptyLike, setEmptyLike] = useState<number>(0) 
     const [catalog, setCatalog] = useState<boolean>(false)
     
     const dispatch = useDispatch();
@@ -118,12 +118,12 @@ export default function Basis({ children, }:
             if(!cart.every(elem => selectedProducts.some(item => item.id === elem.id))){
                 reqUpdataList()
             }
-            setShowEmptyCart(cart.length)
+            setEmptyCart(cart.length)
             window.localStorage.removeItem('cart')
             window.localStorage.setItem('cart', JSON.stringify(cart))
         } else {
             window.localStorage.removeItem('cart')
-            setShowEmptyCart(0)
+            setEmptyCart(0)
             setShowBuy(false)
         }
     }, [cart]);
@@ -133,12 +133,12 @@ export default function Basis({ children, }:
             if(!likes.every(elem => selectedProducts.some(item => item.id === elem))){
                 reqUpdataList()
             }
-            setShowEmptyLike(likes.length)
+            setEmptyLike(likes.length)
             window.localStorage.removeItem('likes')
             window.localStorage.setItem('likes', JSON.stringify(likes))
         } else {
             window.localStorage.removeItem('likes')
-            setShowEmptyLike(0)
+            setEmptyLike(0)
             setShowLikes(false)
         }
     }, [likes])
@@ -195,9 +195,12 @@ export default function Basis({ children, }:
                                     <Link href="/delivery" className='location_delivery nav_mar'>Доставка</Link>
                                 </div>
                                 <div className="header_navbar__contact">
-                                    <span>
+                                    <span className='phone_head'>
                                         <FontAwesomeIcon icon='phone' size='sm' className='i_phone'/>
-                                        7-888-888-88-88
+                                         7-967-098-**-98
+                                    </span>
+                                    <span className='login_head' onClick={() => {if(login){router.push('/personal-account')} else {dispatch(poputUpdate(true))}}}>
+                                        {login ? user.name : "Войти"}
                                     </span>
                                 </div>
                             </div>
@@ -245,6 +248,14 @@ export default function Basis({ children, }:
                     </div>
                 </div>
             </div>
+
+            {(emptyCart > 0 && pathName !== '/cart') && 
+            <div className="flying_cart">
+                <div className="tab_cart" onClick={() => {router.push('/cart')}}>
+                    <FontAwesomeIcon icon='cart-shopping' size='sm' className='i_cart4'/>
+                    <div className= {classNames("cart_circle", {'show_none': emptyCart === 0}) }>{emptyCart}</div>
+                </div>
+            </div>}
             
             <CSSTransition in={popupLocat} timeout={50} unmountOnExit classNames='trans'>
                 <ChosingCity outPopup={setPopupLocat} />
