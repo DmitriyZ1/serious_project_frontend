@@ -84,9 +84,6 @@
                 font-family: roboto;
                 // font-size: 1.4rem;
                 text-align: right;
-                svg{
-
-                }
             }
             .favourites_item_button{
                 .button_addcart{
@@ -137,7 +134,7 @@
     }
     .fav_name_button{
         span{
-           display: block;
+           display:inline-block;
         }
     }
 }
@@ -161,7 +158,7 @@
     }
     .fav_name_button{
         span{
-           display: block;
+           display: inline-block;
         }
     }
 }
